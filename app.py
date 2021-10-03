@@ -18,4 +18,4 @@ brand_type = st.selectbox("Select Brand Type: ", ['Maruti', 'Skoda', 'Honda', 'H
 if st.button("Predict Price"):
     input_q = np.array([[fuel_type, seller_type, transmission_type, owner_type, engine, max_power,(2020-purchase_year),brand_type]])
     price = pipe.predict(input_q)[0]
-    st.header(str(int(price)))
+    st.header("Predicted Price: Rs."+str(int(price)))
